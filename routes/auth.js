@@ -7,7 +7,6 @@ const authController = require("../controller/auth");
 router.post(
   "/signup",
   [
-    body("firstName", "first name should not be empty").not().isEmpty(),
     body("lastName", "last name should not be empty").not().isEmpty(),
     body("email", "email is invalid").isEmail().not().isEmpty(),
     body("password", "password should not be less than 8 characters long")
