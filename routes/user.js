@@ -4,7 +4,7 @@ const userController = require("../controller/user");
 const multer = require("multer");
 const { body } = require("express-validator");
 
-const upload = multer({ dest: "../uploads" });
+const upload = multer({ dest: "./util/images" });
 
 // Posts Routes
 router.post("/post", upload.single("file"), userController.createPost);
