@@ -50,16 +50,16 @@ const userSchema = new Schema(
       email: {
         type: String,
         lowercase: true,
-        required: true,
+        // required: true,
       },
       about: {
         type: String,
-        required: true,
+        // required: true,
         default: "No Bio",
       },
       gender: {
         type: String,
-        required: true,
+        // required: true,
       },
       state: {
         type: String,
