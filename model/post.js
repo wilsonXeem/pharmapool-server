@@ -12,11 +12,6 @@ const postSchema = new Schema(
         type: Schema.Types.ObjectId,
       },
     },
-    product: {
-      type: Schema.Types.ObjectId,
-      required: true,
-      ref: "Product",
-    },
     edited: Date,
     creator: {
       type: Schema.Types.ObjectId,
