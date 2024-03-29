@@ -93,5 +93,6 @@ const server = app.listen(process.env.PORT || 8000, () =>
 );
 
 const io = require("./util/socket").init(server);
-
-io.on("connection", (socket) => {});
+io.on("connection", (socket) => {
+  console.log("socket connected")
+});
