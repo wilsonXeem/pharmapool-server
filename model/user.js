@@ -181,8 +181,9 @@ const userSchema = new Schema(
   }
 );
 
-userSchema
-  .virtual("fullName")
-  .get(() => `${this.firstName} ${this.lastName}`)
+const virtualFullName = userSchema.virtual("fullName");
+virtualFullName.get(function () {
+  return `${this.firstName} ${this.lastName}`;
+});
 
 module.exports = mongoose.model("User", userSchema);
