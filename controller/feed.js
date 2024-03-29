@@ -28,7 +28,6 @@ module.exports.getPosts = async (req, res, next) => {
     posts = await Post.find().sort({ updatedAt: -1 })
       .populate("creator")
       .populate("likes", "firstName lastName fullName profileImage")
-      .populate(populatePost);
     posts.sort((a, b) => b.updatedAt - a.updatedAt);
 
     res.status(200).json({ posts });
